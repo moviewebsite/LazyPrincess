@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/LazyDeveloper')
+                InlineKeyboardButton(' Updates ☸', url='https://t.me/codecreation')
             ],
             [
-                InlineKeyboardButton('🙆🏻 Help 🦾', url=f"https://t.me/{temp.U_NAME}?start=help"),
+                InlineKeyboardButton('Help ♜', url=f"https://t.me/{temp.U_NAME}?start=help"),
             ],[
             InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
             ],
@@ -50,12 +50,12 @@ async def start(client, message):
             InlineKeyboardButton('⤪ Add Me To Your Groups ⤨', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton(' Search ⌕', switch_inline_query_current_chat=''),
-            InlineKeyboardButton(' Updates ☸', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton(' Updates ☸', url='https://t.me/codecreation')
             ],[
             InlineKeyboardButton(' Help ♜', callback_data='help'),
             InlineKeyboardButton(' About 〄', callback_data='about')
             ],[
-            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/LazyDeveloper')
+            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/codingcreation')
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -100,16 +100,16 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton(' ⤪ Add Me To Your Groups ⤨', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⤪ Add Me To Your Groups ⤨', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Search ⌕', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Updates ☸', url='https://t.me/LazyDeveloper')
+            InlineKeyboardButton(' Search ⌕', switch_inline_query_current_chat=''),
+            InlineKeyboardButton(' Updates ☸', url='https://t.me/codecreation')
             ],[
-            InlineKeyboardButton('Help ♜', callback_data='help'),
+            InlineKeyboardButton(' Help ♜', callback_data='help'),
             InlineKeyboardButton(' About 〄', callback_data='about')
-        ],[
-            InlineKeyboardButton('SUBSCRIBE', url='https://youtube.com/@codingcreation')
-        ]]
+            ],[
+            InlineKeyboardButton('Watch Tutorial', url='https://youtube.com/codingcreation')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
